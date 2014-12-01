@@ -1,0 +1,68 @@
+.ebooks-overlay { margin-top: 84px; position: absolute; width: 62px !important; } 
+.library_guides_search { padding: 5px 10px 5px 20px; width: 370px; }
+.library_guides_search div:first-child { padding-bottom: 2px; }
+.library_guides_col_left{ width: 400px; }
+.library_guides_col_right{ width: 260px; }
+.library_guides_more {
+	float: right;
+	margin-right: 20px;
+	height: 30px;
+	font-weight: bold;
+}
+.library_guides_more span, .library_guides_more a{ vertical-align: middle; }
+.library_guide_desc{font-size: 100%;}
+.library_guide_link { font-weight: bold; }
+#library_guide_new_books {
+	text-align: center;
+	padding: 10px 0px 5px 0px;
+}
+
+#content-core ul { margin: 5px 0 0 20px; }
+#library_guide_new_books img.syndetic-image {
+	border: 1px solid black;
+	width: 60px !important; 
+	height: 92px !important; 
+}
+.library_guides_tip_width { width: 350px !important; }
+
+/* Films on Demand Popup. */
+#pop_closer {
+	background: -moz-linear-gradient(top,  rgba(45,45,45,0) 0%, rgba(45,45,45,0.8) 40%, rgba(45,45,45,0.92) 43%, rgba(60,60,60,1) 45%, rgba(96,96,96,1) 50%, rgba(60,60,60,1) 55%, rgba(45,45,45,0.92) 57%, rgba(45,45,45,0.8) 60%, rgba(45,45,45,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(45,45,45,0)), color-stop(40%,rgba(45,45,45,0.8)), color-stop(43%,rgba(45,45,45,0.92)), color-stop(45%,rgba(60,60,60,1)), color-stop(50%,rgba(96,96,96,1)), color-stop(55%,rgba(60,60,60,1)), color-stop(57%,rgba(45,45,45,0.92)), color-stop(60%,rgba(45,45,45,0.8)), color-stop(100%,rgba(45,45,45,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(45,45,45,0) 0%,rgba(45,45,45,0.8) 40%,rgba(45,45,45,0.92) 43%,rgba(60,60,60,1) 45%,rgba(96,96,96,1) 50%,rgba(60,60,60,1) 55%,rgba(45,45,45,0.92) 57%,rgba(45,45,45,0.8) 60%,rgba(45,45,45,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(45,45,45,0) 0%,rgba(45,45,45,0.8) 40%,rgba(45,45,45,0.92) 43%,rgba(60,60,60,1) 45%,rgba(96,96,96,1) 50%,rgba(60,60,60,1) 55%,rgba(45,45,45,0.92) 57%,rgba(45,45,45,0.8) 60%,rgba(45,45,45,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(45,45,45,0) 0%,rgba(45,45,45,0.8) 40%,rgba(45,45,45,0.92) 43%,rgba(60,60,60,1) 45%,rgba(96,96,96,1) 50%,rgba(60,60,60,1) 55%,rgba(45,45,45,0.92) 57%,rgba(45,45,45,0.8) 60%,rgba(45,45,45,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(45,45,45,0) 0%,rgba(45,45,45,0.8) 40%,rgba(45,45,45,0.92) 43%,rgba(60,60,60,1) 45%,rgba(96,96,96,1) 50%,rgba(60,60,60,1) 55%,rgba(45,45,45,0.92) 57%,rgba(45,45,45,0.8) 60%,rgba(45,45,45,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002d2d2d', endColorstr='#002d2d2d',GradientType=0 ); /* IE6-9 */
+}
+#pop_player {
+	background: rgb(0,0,0); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(94,94,94,1) 12%, rgba(0,0,0,1) 13%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(12%,rgba(94,94,94,1)), color-stop(13%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(94,94,94,1) 12%,rgba(0,0,0,1) 13%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(94,94,94,1) 12%,rgba(0,0,0,1) 13%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(94,94,94,1) 12%,rgba(0,0,0,1) 13%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(94,94,94,1) 12%,rgba(0,0,0,1) 13%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+.pop_play {
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 160px;
+    margin: 10px;
+	text-align: center;
+    width: 230px;
+}
+.pop_preview {
+    margin-bottom: -30px;
+    margin-left: 5px;
+	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+.pop_play > a, .pop_play > span {
+	display: block;
+    height:160px; 
+	width:230px;
+}

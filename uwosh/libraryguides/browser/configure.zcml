@@ -1,0 +1,107 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+	i18n_domain="uwosh.libraryguides">
+
+	<include package="plone.app.contentmenu" />
+
+	<!-- ADD PAGE BELOW HERE -->
+
+	<browser:page
+		for="*"
+		name="guide_tools"
+		class=".subject_view.GuideTemplateTools"
+		permission="zope2.View"
+	/>
+	
+	<browser:page
+		for="..content.subjectGuide.ILibrarySubjectGuide"
+		name="databases"
+		class=".subject_view.ResearchDatabasesView"
+		template="templates/research_db_view.pt"
+		permission="zope2.View"
+	/>
+	
+	<browser:page
+		for="..content.subjectGuide.ILibrarySubjectGuide"
+		name="good_for_any_subject"
+		template="templates/good_for_any_subject.pt"
+		permission="zope2.View"
+	/>
+    
+    <browser:page
+		for="..content.subjectGuide.ILibrarySubjectGuide"
+		name="guide_view"
+		class=".subject_view.SubjectGuideView"
+		template="templates/guide_view.pt"
+		permission="zope2.View"
+    />
+    
+	<browser:page
+		for="..content.subjectGuide.ILibrarySubjectGuide"
+		name="background"
+		class=".subject_view.SubjectBaseView"
+		template="templates/background_view.pt"
+		permission="zope2.View"
+	/>
+	
+	<browser:page
+		for="..content.subjectGuide.ILibrarySubjectGuide"
+		name="campus-resources"
+		class=".subject_view.SubjectBaseView"
+		template="templates/campus_resources_view.pt"
+		permission="zope2.View"
+	/>
+
+    
+    <browser:page
+		for=".atoz_view.IATOZView"
+		name="atoz_view"
+		class=".atoz_view.ATOZView"
+		template="templates/atoz.pt"
+		permission="zope2.View"
+    />
+    
+	<browser:page
+		for="..content.subjectGuide.ILibrarySubjectGuide"
+		name="sv_subject_search_box"
+		template="templates/subject_search_box.pt"
+		permission="zope2.View"
+	/>
+    
+	<browser:page
+		for="*"
+		name="sv_subject_legend"
+		template="templates/sv_legend.pt"
+		permission="zope2.View"
+	/>
+    
+    
+    
+    <!-- ADD RESOURCES BELOW HERE -->
+    
+    <browser:resourceDirectory
+      name="uwosh.libraryguides.javascripts"
+      directory="javascripts"
+      layer="plone.theme.interfaces.IDefaultPloneLayer"
+    />
+    
+    <browser:resourceDirectory
+      name="uwosh.libraryguides.stylesheets"
+      directory="stylesheets"
+      layer="plone.theme.interfaces.IDefaultPloneLayer"
+    />
+    
+    <browser:resourceDirectory
+      name="uwosh.libraryguides.templates"
+      directory="templates"
+      layer="plone.theme.interfaces.IDefaultPloneLayer"
+    />
+    
+    <browser:resourceDirectory
+      name="uwosh.libraryguides.images"
+      directory="images"
+      layer="plone.theme.interfaces.IDefaultPloneLayer"
+    />
+    
+</configure>

@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="uwosh.libraryguides">
+
+  <!-- configure your content components here -->
+  
+	<class class=".subjectGuide.ILibrarySubjectGuide">
+		<require
+	        permission="zope2.View"
+	        interface=".subjectGuide.ILibrarySubjectGuide"
+        />
+	</class>
+
+	<adapter factory=".refDBcache.RefDBCache"
+	         name="ReferenceDatabaseCache" />
+  	<adapter factory=".atoz.ATOZ"
+	         name="AtoZCache" />
+  
+         
+</configure>

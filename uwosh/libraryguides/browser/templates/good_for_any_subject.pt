@@ -1,0 +1,123 @@
+<div class="library_headline">Good For Any Subject</div>
+<div tal:on-error="nothing">
+	<ul>
+		<li>
+			<span class="pane-tip-trigger">
+				<a class="library_guide_link gat_research_link" title="Academic Search Complete" href="http://www.remote.uwosh.edu/login?url=http://search.ebscohost.com/login.aspx?authtype=ip,uid&profile=ehost&defaultdb=a9h">Academic Search Complete</a>
+				<img src="++resource++uwosh.librarytheme.images/more-info.gif" alt="More Info"/>
+				
+				<div class="pane-tip-window gat_research_pane">
+					<div class="pane-tip-heading gat_database_heading">
+						<a href="http://www.remote.uwosh.edu/login?url=http://search.ebscohost.com/login.aspx?authtype=ip,uid&profile=ehost&defaultdb=a9h">Academic Search Complete</a>
+					</div>
+					
+					<div class="library_guide_desc">
+						Gain access to information from a wide range of academic areas including business, 
+						social sciences, humanities, general academic, general science, and education. 
+						The upgrade from Academic Search Elite to Academic Search Complete has been partially 
+						funded in 2007-08 by the UW Oshkosh Student Technology Fund.
+					</div>
+					<div>
+						<img src="++resource++uwosh.librarytheme.images/ft.gif" />
+						<span>Full Text Available</span>
+					</div>
+					<div>
+						<img src="++resource++uwosh.librarytheme.images/journals.png" alt="Resource Type"/>
+						<span>Journal, Magazine and Newspaper Resources</span>
+					</div>
+				</div>
+			</span>
+			<div class="library_guide_desc">
+				<span>Multi-topic tool with full text for nearly 4,500 journals including 3,700+ peer-reviewed journals.</span>
+			</div>
+		</li>
+		<li>
+			<span class="pane-tip-trigger">
+				<a class="library_guide_link gat_research_link" title="Masterfile Premier" href="http://www.remote.uwosh.edu/login?url=http://search.ebscohost.com/login.asp?profile=web&defaultdb=f5h">Masterfile Premier</a>
+				<img src="++resource++uwosh.librarytheme.images/more-info.gif" alt="More Info"/>
+
+				<div class="pane-tip-window gat_research_pane">
+					<div class="pane-tip-heading gat_database_heading">
+						<a href="http://www.remote.uwosh.edu/login?url=http://search.ebscohost.com/login.asp?profile=web&defaultdb=f5h">Masterfile Premier</a>
+					</div>
+					
+					<div class="library_guide_desc">
+						Provides abstracts and indexing for more than 3,100 periodicals, plus searchable full text for more 
+						than 1,500 active periodicals. Subjects covered include general reference, business, health, 
+						multicultural and more. Total coverage includes over 4 million articles.
+					</div>
+					<div>
+						<img src="++resource++uwosh.librarytheme.images/ft.gif" />
+						<span>Full Text Available</span>
+					</div>
+					<div>
+						<img src="++resource++uwosh.librarytheme.images/journals.png" alt="Resource Type"/>
+						<span>Journal, Magazine and Newspaper Resources</span>
+					</div>
+				</div>
+			</span>
+			<div class="library_guide_desc">
+				<span>Multi-topic tool includes full text of popular magazines, scholarly journals, newspapers, and more.</span>
+			</div>
+		</li>
+		<li>
+			<span class="pane-tip-trigger">
+				<a class="library_guide_link gat_research_link" title="Lexis Nexis Academic Universe" href="http://www.remote.uwosh.edu/login?url=http://www.lexisnexis.com/us/lnacademic/api/version1/sf?shr=t&sfi=AC01NBSimplSrch">Lexis Nexis Academic Universe</a>
+				<img src="++resource++uwosh.librarytheme.images/more-info.gif" alt="More Info"/>
+				
+				<div class="pane-tip-window gat_research_pane">
+					<div class="pane-tip-heading gat_database_heading">
+						<a href="http://www.remote.uwosh.edu/login?url=http://www.lexisnexis.com/us/lnacademic/api/version1/sf?shr=t&sfi=AC01NBSimplSrch">Lexis Nexis Academic Universe</a>
+					</div>
+					
+					<div>
+						Academic Universe provides access to nearly 5,000 publications on a wide range of topics: news, 
+						business, legal, and reference information. In Business, it includes company financials, 
+						SEC Filings and reports, directories, accounting journals & more.
+					</div>
+					<div>
+						<img src="++resource++uwosh.librarytheme.images/ft.gif" />
+						<span>Full Text Available</span>
+					</div>
+					<div>
+						<img src="++resource++uwosh.librarytheme.images/journals.png" alt="Resource Type"/>
+						<span>Journal, Magazine and Newspaper Resources</span>
+					</div>
+				</div>
+			</span>
+			
+			<div class="library_guide_desc">
+				<span>Full-text news & newspapers, business, legal, medical, and reference information.</span>
+			</div>
+		</li>
+		<li>
+			<span class="pane-tip-trigger">
+				<a class="library_guide_link gat_research_link" title="Credo Reference" href="http://www.remote.uwosh.edu/login?url=http://www.credoreference.com">Credo Reference</a>
+				<img src="++resource++uwosh.librarytheme.images/more-info.gif" alt="More Info"/>
+				
+				<div class="pane-tip-window gat_research_pane">
+					<div class="pane-tip-heading gat_database_heading">
+						<a href="http://www.remote.uwosh.edu/login?url=http://www.credoreference.com">Credo Reference</a>
+					</div>
+					<div>
+						Credo is an easy-to-use tool for research projects and homework. Search in hundreds of encyclopedias, dictionaries, 
+						thesauri, quotations, and subject-specific titles, as well as 200,000+ images and audio files, and nearly 100 videos.
+					</div>
+					<div>
+						<img src="++resource++uwosh.librarytheme.images/ft.gif" />
+						<span>Full Text Available</span>
+					</div>
+					<div>
+						<img src="++resource++uwosh.librarytheme.images/background_info.png" alt="Resource Type"/>
+						<span>Reference &amp; Background Resources</span>
+					</div>
+				</div>
+			</span>
+			
+			<div class="library_guide_desc">
+				<span>Credo is an easy-to-use tool for research projects and homework. Search in hundreds of encyclopedias, dictionaries, thesauri, 
+						quotations, and subject-specific titles, as well as 200,000+ images and audio files, and nearly 100 videos.</span>
+			</div>
+		</li>
+	</ul>
+</div>

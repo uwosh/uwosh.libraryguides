@@ -1,0 +1,262 @@
+Changelog
+=========
+
+0.3.28
+------
+- Reworked news feeds
+
+0.3.27
+------
+- eBooks overlay added to covers
+
+0.3.26
+------
+- Expanded the rotation of the books mod function
+
+0.3.25
+------
+- Changed to Database Lookup over preloading data
+
+0.3.24
+------
+- Added anchor targets to AtoZ databases based off of the database id
+- Added ID to the AtoZ cache factory
+
+0.3.23
+------
+- Moved portlets into this product.
+- Complete refactor of portlet code.
+
+0.3.22
+------
+- Moved portlets into this product.
+- Complete refactor of portlet code.
+
+0.3.21
+------
+- Improved analytic infrastructure
+
+0.3.20
+------
+- Improved analytic infrastructure
+
+0.3.19
+------
+- Stable release for new pane tip tool.
+
+0.3.18
+------
+- Adjusted new tooltip pane.
+
+0.3.17
+------
+- Major change, added new tooltip pane.
+
+0.3.16
+------
+- Minor change.
+
+0.3.15
+------
+- Changed heading in the books feed to New:
+
+0.3.14
+------
+- Added archive support to guides
+
+0.3.13
+------
+- Made changes to Trial and Downtime messages from staff feedback
+
+0.3.12
+------
+- Removed caching system and replaced with broader system.
+
+0.3.11
+------
+- Added Trial messages to databases
+- Added Downtime messages to databases
+- Changed tooltips from SimpleTip to ToolTipper.
+
+0.3.10
+------
+- Fixing guides loading images
+
+0.3.9
+-----
+- uwosh.librarytheme was refactored, some slight changes to the guides.
+- Decoupled uwosh.librarytheme as much as possible for right now.
+
+0.3.8
+-----
+- Massive refactor.
+
+0.3.7
+-----
+- Fixed Films on Demand url bug
+
+0.3.6
+-----
+- Added Films on Demand
+- Added temp fix to isbn issue.
+
+0.3.5
+-----
+- Fixed campus resource bug.
+
+0.3.4
+-----
+- Unified Find Button
+- Candidate for release
+
+0.3.3b
+------
+- Relinked Campus Resources.
+
+0.3.2b
+------
+- Added campus resources.
+- Fixed url link bug.
+
+0.3.1b
+------
+- Cover images now using Bowker.
+
+0.3.0b
+------
+- Switched search box labeling to fix issues from usability testing
+- Subjects now pull data from a Web Service rather than from Sql itself.
+- As last line, AtoZ same.
+
+0.2.9b
+------
+- Added SimpleTips to Good For Any Subject Template
+- Changed Voyager Loading Images
+
+0.2.8b
+------
+- Misnamed attribute.
+
+0.2.7b
+------
+- Improved GA Tracking
+
+0.2.5b
+------
+- Fixed SqlAlchemy connection bug.  Forces engine to unbind and close now.
+
+0.2.5b
+------
+- Adjusted class for simpletip.
+
+0.2.4b
+------
+- Vocabs changed.
+
+0.2.3b
+------
+- Changed hover over definitions.
+
+0.2.2b
+------
+- Search Box Changes.
+
+0.2.1b
+------
+- Search Box now generic
+
+0.1.8a
+------
+- Subject Guides now use Quill Weblog Objects for news.
+- Added subject guide field, primary news tag.
+
+0.1.7a
+------
+- Voyager DAO now weeds out duplicate results in the Catalog.
+- Voyager DAO now weeds out Leisure Reading and Government Documents.
+
+0.1.6a
+------
+- Removed unused imports.
+- Clean up.
+
+0.1.5a
+------
+- Added ORM classes
+- Adjusted views for guides, remove journal listings
+- A-to-Z new cache factory
+- A-to-Z views/controllers added.
+
+0.1.4a
+------
+- Forgot to add property to propertiestools.xml
+
+0.1.3a
+------
+- Changed page template layouts and wording.
+
+0.1.2a
+------
+- Fixed Automatic updates of news bug.
+
+
+0.1.1a
+------
+- New CSS layout, based on umich research.
+- Automatic Collection create with Subject Guide.
+- Automatic updates of Collection criteria when guide is edited.
+
+
+0.1.0a
+------
+- Changed page templates
+- Added Background and Reference sections
+- Added Background and Reference page template
+
+
+0.0.9a
+------
+- Fixed Unicode error
+- Fixed bad reference to dead links.
+- Tweeked css for GuideView to render NewBooks correctly.
+- Refactored GuideView and ArticleView and templates
+
+
+0.0.8a
+------
+- Fixed MySQL connection
+- Adjust sqlalchemy ORM setup
+- Changed sqlalchemy dialect.
+
+
+0.0.7a
+------
+- Changed sqlalchemy dialect.
+
+
+0.0.4a
+------
+- Fixed egg install issue
+
+0.0.3a
+------
+- Fixed egg install issue
+- (Egg Removed)
+
+0.0.2a
+------
+- DAO for sql databases and webservices.
+- custom content type for Guide information
+- Guide css, html, and javascript.
+- setup database schemas
+- custom browserviews
+
+0.0.1a
+------
+- Initial Release
+
+0.0.1 (xxxx-xx-xx)
+------------------
+
+- Created recipe with ZopeSkel
+  [David Hietpas]

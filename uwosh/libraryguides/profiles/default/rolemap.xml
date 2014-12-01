@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <!-- -*- extra stuff goes here -*- -->
+	<permission name="uwosh.libraryguides: Add LibrarySubjectGuide" acquire="False">
+      <role name="Owner" />
+      <role name="Manager" />
+    </permission>
+  </permissions>
+</rolemap>

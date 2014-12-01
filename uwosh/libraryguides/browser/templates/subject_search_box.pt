@@ -1,0 +1,26 @@
+
+<div class="library_guides_search" tal:define="search_info context/getSearchBoxData" tal:condition="search_info/action" tal:on-error="nothing">
+	
+	<span class="pane-tip-trigger">
+		<div class="library_text_vmiddle" tal:condition="python:(context.getSearchBoxData() != None)">
+			<label>Quick Article Search:</label> 
+			<img src="++resource++uwosh.librarytheme.images/more-info.gif" alt="More Info"/>
+			<i>(Searches top databases only)</i> 
+		</div>
+
+		<div>
+			<form class="gat_subject_search" tal:attributes="action search_info/action; method search_info/method">
+				<input style="height: 20px; width: 260px;" type="text" max_length="100" tal:attributes="name search_info/query" alt="Search for Articles" />
+				<input class="library_search_button" type="submit" value=" Search" />
+			</form>
+		</div>
+		<div class="pane-tip-window">
+			<div class="pane-tip-heading"><a>Quick Article Search</a></div>
+			<div>
+				Searches a limited set of article databases in this subject.
+				To find additional articles, please try one of the Research Databases below.
+			</div>
+		</div>
+	</span>
+	
+</div>

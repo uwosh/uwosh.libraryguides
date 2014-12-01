@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+	
+	<object name="external_resources" meta_type="Plone Property Sheet">
+		<property name="title" type="string">External Resource Properties</property>
+		<property name="help" type="text">Contains URLs and sql connections.</property>
+		<property name="mysql_database" type="string">root:@localhost:3306/coursepages</property>
+		<property name="reference_dbs_ws" type="string">http://localhost/cp/ws1.php</property>
+		<property name="atoz_ws" type="string">http://localhost/cp/ws2.php</property>
+		<property name="voyager_xml_over_http" type="string">http://hvoydbupg.wisconsin.edu:7114/vxws</property>
+		<property name="proxy_server_url" type="string">http://www.remote.uwosh.edu/login?url=</property>
+	</object>
+	
+	<object name="base_paths" meta_type="Plone Property Sheet">
+		<property name="base_guide_path" type="string">/sites1/library/subjects</property>
+		<property name="base_atoz_path" type="string">/sites1/library/databases/atoz</property>
+	</object>
+	
+	<object name="cache_objects" meta_type="Plone Property Sheet">
+		<property name="cache_types" type="lines" purge="False">
+			<element value="ReferenceDatabaseCache" />
+			<element value="AtoZCache" />
+		</property>
+	</object>
+	
+	<object name="site_news_limits" meta_type="Plone Property Sheet">
+		<property name="subject_guides" type="int">3</property>
+		<property name="subject_guides_days_visible" type="int">1</property>
+	</object>	
+	
+	<object name="library_ip_ranges" meta_type="Plone Property Sheet">
+		<property name="campus_ip_range" type="string" purge="False">141.233</property>
+	</object>
+
+</object>

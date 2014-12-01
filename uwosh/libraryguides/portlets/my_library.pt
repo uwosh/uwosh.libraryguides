@@ -1,0 +1,216 @@
+<dl class="portlet portletLibraryUserCustomizationPortlet"
+    i18n:domain="uwosh.librarytheme">
+
+    <dt class="portletHeader">
+	    <form class="gat_mylibrary_clear" tal:condition="view/cookies_exist" tal:attributes="action context/absolute_url">
+	    	<span>My Library</span>
+			<input type="hidden" name="change" value="clear" />
+			<input class="my_library_clear" type="submit" name="default" title="Change my quick links." value=""/>
+		</form>
+		<span tal:condition="not: view/cookies_exist">My Library</span>
+    </dt>
+
+
+    <dd class="portletItem odd" >
+
+		<label>
+			<a class="gat_mylibrary_accounts" tal:attributes="href string:${view/portal_obj/absolute_url}/borrowing/renew-items;" style="color: black !important;">Accounts</a>
+		</label>
+		<ul>
+			<li>
+				<a class="gat_mylibrary_polk" href="http://uw-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/myAccountMenu.do?vid=OSH">Polk Library &amp; UW System</a>
+			</li>
+			<li>
+				<a class="gat_mylibrary_ill"  href="https://wisconsin.hosts.atlas-sys.com/nonshib/gzo/" title="Interlibrary Loan">Interlibrary Loan</a>
+			</li>
+			<li class="anchor-drops js_enabled">
+				<span class="anchor-drops-label" title="More Options">
+					<a tal:attributes="href string:${view/portal_obj/absolute_url}/borrowing/renew-items;">More</a>
+					<span class="anchor-drops-arrow">&nbsp;</span>
+				</span>
+				<ul class="anchor-drops-options anchor-drops-no-scroll" style="height: 120px; width: 150px;">
+					<li>
+						<b><a class="gat_mylibrary_polk" href="http://uw-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/myAccountMenu.do?vid=OSH">Polk Library &amp; UW System</a></b>
+					</li>
+					<li>
+						<a class="gat_mylibrary_polk_renew" href="http://uw-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/myAccountMenu.do?vid=OSH">- Renew Item</a>
+					</li>
+					<li>
+						<a class="gat_mylibrary_polk_requests" href="http://uw-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/myAccountMenu.do?vid=OSH">- Requests</a>
+					</li>
+					<li>
+						<a class="gat_mylibrary_polk_eshelf" href="http://uw-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/basket.do?fn=display&fromUserArea=true&vid=OSH&fromPreferences=false">- e-Shelf</a>
+					</li>
+					<li>
+						<b><a class="gat_mylibrary_ill" href="https://wisconsin.hosts.atlas-sys.com/nonshib/gzo/">Interlibrary Loan</a></b>
+					</li>
+					<li>
+						<a class="gat_mylibrary_ill_renew" href="https://wisconsin.hosts.atlas-sys.com/nonshib/gzo/">- Renew Item</a>
+					</li>
+					<li>
+						<b><a class="gat_mylibrary_refworks" href="http://www.refworks.com/RWShibboleth/?providerid=https://netid.uwosh.edu/idp/shibboleth">RefWorks</a></b>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<br />
+
+		<label>Quick Links</label>
+
+		<tal:block condition="not: view/cookies_exist">
+			<!-- NOT CUSTOMIZIED -->
+			<form class="gat_mylibrary_set" tal:attributes="action context/absolute_url" method="post">
+	            <div>
+	                I am a:
+					<br/>
+	                <select style="width: 173px" name="audience">
+	                    <option tal:attributes="value view/TYPE_STUDENT; selected python:view.cookie_history('past_audience',view.TYPE_STUDENT)">Student</option>
+						<option tal:attributes="value view/TYPE_GRADUATE_STUDENT; selected python:view.cookie_history('past_audience',view.TYPE_GRADUATE_STUDENT)">Graduate Student</option>
+	                    <option tal:attributes="value view/TYPE_FACULTY_STAFF; selected python:view.cookie_history('past_audience',view.TYPE_FACULTY_STAFF)">Faculty or Staff Member</option>
+						<option tal:attributes="value view/TYPE_ALUMNI_VISITOR; selected python:view.cookie_history('past_audience',view.TYPE_ALUMNI_VISITOR)">Alumnus/a or Visitor</option>
+	                </select>
+	            </div>
+	            
+	            <div>
+	                I am researching:
+					<br/>
+	                <select style="width: 173px" name="subject">
+	                    <option tal:repeat="node view/get_subject_list"
+						 		tal:attributes="value node/getPath; selected python:view.cookie_history('past_subject',node.getPath())" 
+								tal:content="node/Title">default</option>
+	                </select>
+	            </div>
+	            
+	            <div>
+	                <input type="submit" value="Show Quick Links" name="submit" />
+					<input type="hidden" name="change" value="set" />
+	            </div>
+				
+	        </form>			
+			
+		</tal:block>
+
+
+
+		<tal:block condition="view/cookies_exist">
+			<tal:block define="audience view/audience; subject view/subject">
+				<!-- CUSTOMIZIED -->
+				
+				<!-- AUDIENCE -->
+		        <div>
+		        	<b>
+		        		<a class="gat_audience_type gat_audience_link" tal:attributes="href audience/getURL; title audience/Title"
+						   tal:content="audience/Title">default</a>
+					</b>
+				</div>
+				
+				<ul tal:condition="audience/news/posts">
+					<li>
+						<a class="gat_audience_link" title="News" tal:attributes="href string:${view/portal_obj/absolute_url}/${audience/news/path}">News</a>
+						<ul tal:condition="python:view.data.news_limit_aud>0">
+							<li tal:repeat="node audience/news/posts">
+								<a class="gat_audience_link" tal:attributes="href node/getURL; title node/Title" 
+								   tal:content="python:(view.shorten_text(node['Title']))" />
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+	        	<ul>
+	        		<li tal:repeat="node audience/links">
+	        			<a class="gat_audience_link" tal:attributes="href node/getURL; title node/Title" tal:content="node/Title" />
+					</li>
+				</ul>
+				
+				<!-- SUBJECT -->
+				<div tal:condition="python: subject['guide'] != None">
+					<b>
+		        		<a class="gat_subjects_link gat_subject_type" tal:attributes="href subject/guide/absolute_url; title subject/guide/Title"
+						   tal:content="subject/guide/Title" />
+					</b>
+		        </div>
+				
+			    <ul>
+			    	<li>
+			    		<a class="gat_subjects_link" tal:attributes="href subject/guide/absolute_url; title string:${subject/guide/Title} - Full">Full Subject Guide</a>
+			    	</li>
+					
+		    		<li tal:condition="subject/news/posts">
+		    			<a class="gat_subjects_link" title="News" tal:attributes="href string:${view/portal_obj/absolute_url}/${subject/news/path}">News</a>
+		    			<ul>
+							<li tal:repeat="node subject/news/posts">
+								<a class="gat_subjects_link" tal:attributes="href node/getURL; title node/Title" 
+								   tal:content="python:(view.shorten_text(node['Title']))" />
+							</li>
+						</ul>
+					</li>
+					<li tal:condition="subject/research_databases">
+		    			<a class="gat_subjects_link" title="Research Databases" 
+							tal:attributes="href string:${subject/guide/absolute_url}/databases">Research Databases</a>
+		    			<ul tal:condition="python:view.data.research_databases>0">
+							<li tal:repeat="node subject/research_databases">
+								<a class="gat_subjects_db_link" tal:content="python: (view.shorten_text(node['title']))" 
+									tal:attributes="href python:view.EzProxy(node['is_omit_proxy']) + node['url']; title node/title;" />
+							</li>
+						</ul>
+					</li>
+					
+					<li tal:condition="subject/references">
+		    			<a class="gat_subjects_link" title="Reference &amp; Background" 
+							tal:attributes="href string:${subject/guide/absolute_url}/background">Reference &amp; Background</a>
+		    			<ul tal:condition="python:view.data.references_limit>0">
+							<li tal:repeat="node subject/references">
+								<a class="gat_subjects_db_link" tal:content="python: (view.shorten_text(node['title']))" 
+									tal:attributes="href python:view.EzProxy(node['is_omit_proxy']) + node['url']; title node/title;" />
+							</li>
+						</ul>
+					</li>
+					
+					<li tal:condition="subject/voyager_books_range_title">
+		    			<a class="gat_subjects_opac" title="More New Books" tal:content="python: 'Books: ' + view.shorten_text(subject['voyager_books_range_title'],18)" 
+						tal:attributes="href string:http://oshlib.wisconsin.edu/vwebv/search?searchArg=${subject/voyager_books_ranges}&searchCode=CALL&searchType=1&sortBy=PUB_DATE_DESC" />
+					</li>
+					
+					<tal:block condition="view/data/emc_limit">
+						<li tal:condition="subject/guide/getEMCMoreContent">
+			    			<a class="gat_subjects_link" title="K-12 Education Materials" tal:attributes="href subject/guide/getEMCMoreContent">K-12 Education Materials</a>
+							<ul tal:condition="python:view.data.emc_limit>0">
+								<li tal:repeat="node subject/emc_links">
+									<a class="gat_subjects_link" tal:content="python: (view.shorten_text(node['name']))" tal:attributes="href node/url; title node/name" />
+								</li>
+							</ul>
+						</li>
+					</tal:block>
+					
+					<tal:block condition="view/data/gov_limit">
+						<li tal:condition="subject/guide/getGovernmentMoreContent">
+			    			<a class="gat_subjects_link" title="Government Information" tal:attributes="href subject/guide/getGovernmentMoreContent">Government Information</a>
+							<ul tal:condition="python:view.data.gov_limit>0">
+								<li tal:repeat="node subject/gov_links">
+									<a class="gat_subjects_link" tal:content="python: (view.shorten_text(node['name']))" tal:attributes="href node/url; title node/name" />
+								</li>
+							</ul>
+						</li>
+					</tal:block>
+					
+					<tal:block condition="view/data/arc_limit">
+						<li tal:condition="subject/guide/getArchivesMoreContent">
+			    			<a class="gat_subjects_link" title="Archives" tal:attributes="href subject/guide/getArchivesMoreContent">Archive Resources</a>
+							<ul tal:condition="python:view.data.arc_limit>0">
+								<li tal:repeat="node subject/arc_links">
+									<a class="gat_subjects_link" tal:content="python: (view.shorten_text(node['name']))" tal:attributes="href node/url; title node/name" />
+								</li>
+							</ul>
+						</li>
+					</tal:block>
+				</ul>
+	
+			</tal:block>
+		</tal:block>
+		
+		<br />
+		<br />
+    </dd>
+
+</dl>

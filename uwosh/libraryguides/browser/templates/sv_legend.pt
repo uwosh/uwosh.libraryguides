@@ -1,0 +1,14 @@
+<div class="library_text_right library_text_vmiddle">
+	
+	<img src="++resource++uwosh.librarytheme.images/books.png" alt="Book Image" />
+	<span>Books&nbsp;&nbsp;</span>
+	
+	<img src="++resource++uwosh.librarytheme.images/journals.png" alt="Journal Image" />
+	<span>Journals&nbsp;&nbsp;</span>
+	
+	<img src="++resource++uwosh.librarytheme.images/primary_source.png" alt="Primary Source Image" />
+	<span>Primary Sources&nbsp;&nbsp;</span>
+	
+	<img src="++resource++uwosh.librarytheme.images/background_info.png" alt="Reference Image" />
+	<span>Reference &amp; Background&nbsp;&nbsp;</span>
+</div>

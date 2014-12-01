@@ -1,0 +1,50 @@
+<!-- Pane Window -->
+	<div class="pane-tip-heading gat_database_heading">
+		<a tal:attributes="href python:context.restrictedTraverse('guide_tools').EzProxy(view.node['is_omit_proxy'],view.node['url'])" 
+		   tal:content="view/node/title" />
+	</div>
+	
+	<div tal:on-error="nothing" tal:content="view/node/db_description"></div>
+	
+	<!-- Icon Stuff -->	
+	<div class="pane-icon library_text_vmiddle" tal:on-error="nothing" tal:condition="python: (view.node['tutorial_url'] != '')" >
+		<div>
+			<img src="++resource++uwosh.librarytheme.images/video-icon-s.png" alt="Watch Tutorial" />
+		</div>
+		<a class="gat_database_tutorial library_link" tal:attributes="href python:view.node['tutorial_url']">Learn how to use this database</a>
+	</div>
+	<div class="pane-icon library_text_vmiddle" tal:on-error="nothing" tal:condition="python: (view.node['gots_url'] != '')" >
+		<div>
+			<img src="++resource++uwosh.librarytheme.images/gots-icon-s.png" alt="Watch Tutorial" />
+		</div>
+		<a class="gat_database_tutorial library_link" tal:attributes="href python:view.node['gots_url']">Learn how to use this database</a>
+	</div>
+	<div class="pane-icon library_text_vmiddle" tal:on-error="nothing" tal:condition="python:(view.node['is_some_full_text'] == 1)">
+		<div>
+			<img src="++resource++uwosh.librarytheme.images/ft.gif" alt="Full Text Image" />
+		</div>
+		<span>Full Text Available</span>
+	</div>
+	<div class="pane-icon library_text_vmiddle" tal:on-error="nothing" tal:define="img python: context.restrictedTraverse('guide_tools').image_type(view.node['section'])">
+		<div>
+			<img tal:attributes="src img/image; title img/title" alt="Resource Type Image"/>
+		</div>
+		<span tal:content="img/title" />
+	</div>
+	
+	<div class="pane-tip-warning" tal:on-error="nothing" tal:condition="python: (view.node['warning_message'] != '')">
+		<label style="color: darkred;">
+			<img tal:condition="python: (view.node['warning_message'] != '')" src="++resource++uwosh.libraryguides.images/warning.png" alt="Warning Database" />
+			Notice
+		</label>
+		<div tal:content="structure view/node/warning_message"></div>
+	</div>
+	
+	<div class="pane-tip-trial" tal:on-error="nothing" tal:condition="python: (view.node['trial_message'] != '')">
+		<label style="color: #006600;">
+			<img tal:condition="python: (view.node['trial_message'] != '')" src="++resource++uwosh.libraryguides.images/trial.png" alt="Trial Database" />
+			Trial Period
+		</label>
+		<div tal:content="structure view/node/trial_message"></div>
+	</div>
+	

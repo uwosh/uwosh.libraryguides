@@ -1,0 +1,118 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+	<metal:block fill-slot="style_slot">
+		<style>
+			.atoz-information img { margin-top: -5px; }
+			.atoz-box {
+				display: inline-block; 
+				border: 1px solid #555555; 
+				padding: 4px;
+				background-color: #f0f0f0;
+			}
+			.atoz-box span, .atoz-box a{
+				margin-left: 2px;
+				margin-right: 2px;
+			}
+			.pane-head { color: white; font-weight: bold; }
+			.atoz-desc { padding-left: 10px; }
+			.atoz-group { width: 650px; }
+			.atoz-group > label  {
+				float: left;
+			    margin-right: 5px;
+			    text-align: right;
+			    width: 70px;
+			}
+			.atoz-group > div {
+				float: left;
+				width: 540px;
+			}
+			.atoz-information .pane-tip-warning, .atoz-information .pane-tip-trial { margin-top: 0px; }
+		</style>
+	</metal:block>
+
+    <metal:content-core fill-slot="content-core">
+
+		<div class="library_text_center">
+			<div class="atoz-box">
+				<tal:block tal:repeat="node view/getABCHeaderList">
+					<span style="color: black; font-weight: bold; text-decoration: underline;" tal:condition="python: view.filter(char=node)" tal:content="node" />
+					<a tal:attributes="href string:${context/absolute_url}?display=${node}" 
+					   tal:condition="not: python: view.filter(char=node)" tal:content="node">
+					</a>
+				</tal:block>
+			</div>
+		</div>
+		
+		<br /><br />
+
+		<div class="atoz-information" tal:repeat="node view/get" tal:on-error="nothing">
+			<a tal:on-error="nothing" tal:attributes="name string:id-${node/id}"></a>
+			<img tal:on-error="nothing" tal:condition="python:node['warning_message']!=''" src="++resource++uwosh.libraryguides.images/warning.png" alt="Downtime Warning"/>
+			<img tal:on-error="nothing" tal:condition="python:node['trial_message']!=''" src="++resource++uwosh.libraryguides.images/trial.png" alt="Trial Period" />
+			<a style="font-weight:bold;" tal:content="node/title" 
+			   tal:attributes="href python:view.EzProxy(node['is_omit_proxy'],node['url']); title node/title;" />
+			<img tal:on-error="nothing" tal:condition="python:node['tutorial_url']!=''" src="++resource++uwosh.librarytheme.images/video-icon-s.png" 
+			     alt="Tutorials Available" />
+			<img tal:on-error="nothing" tal:condition="python:node['gots_url']!=''" src="++resource++uwosh.librarytheme.images/gots-icon-s.png" 
+			     alt="Tutorials Available" />
+				 
+			<div class="atoz-desc" tal:content="node/db_description"></div>
+			
+			<div class="atoz-group" tal:on-error="nothing" tal:condition="python:node['tutorial_url']!='' or node['gots_url']!=''">
+				<label>Tutorials:</label>
+				<div tal:condition="python:node['tutorial_url']!=''"><a tal:attributes="href node/tutorial_url">Learn how to use this database</a></div>
+				<div tal:condition="python:node['gots_url']!=''"><a tal:attributes="href node/gots_url">Learn how to use this database</a></div>
+			</div>
+			<div class="library_clear"></div>
+			
+			<div class="atoz-group" >
+				<label>Full Text:</label>
+				<div>
+					<span tal:condition="python:node['is_some_full_text']==1">Yes, some available</span>
+					<span tal:condition="python:node['is_some_full_text']==0">No</span>
+				</div>
+			</div>
+			<div class="library_clear"></div>
+			
+			<div class="atoz-group" tal:define="img python: context.restrictedTraverse('guide_tools').image_type(node['section'])">
+				<label>Includes:</label>
+				<div tal:content="img/title"></div>
+			</div>
+			<div class="library_clear"></div>
+			
+			<div class="atoz-group" tal:condition="python:node['coverage']!=''">
+				<label>Coverage:</label>
+				<div tal:content="node/coverage"></div>
+			</div>
+			<div class="library_clear"></div>
+			
+			<div class="atoz-group" tal:condition="python:node['vendor']!=''">
+				<label>Vendor:</label>
+				<div tal:content="node/vendor"></div>
+			</div>
+			<div class="library_clear"></div>
+			
+			<div class="atoz-group" tal:condition="python:node['warning_message']!=''">
+				<label style="color: darkred;">Notice:</label>
+				<div class="pane-tip-warning" tal:content="structure node/warning_message"></div>
+			</div>
+			<div class="library_clear"></div>
+			
+			<div class="atoz-group" tal:condition="python:node['trial_message']!=''">
+				<label style="color: darkgreen;">Trial Period:</label>
+				<div class="pane-tip-trial" tal:content="structure node/trial_message"></div>
+			</div>
+			<div class="library_clear"></div>
+			
+			<br />
+		</div>
+		
+    </metal:content-core>
+
+</body>
+</html>

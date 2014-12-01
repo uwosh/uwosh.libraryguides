@@ -1,0 +1,24 @@
+Changelog
+=========
+
+0.0.3a
+------------------
+- Fixed egg install issue
+
+0.0.2a
+------------------
+- DAO for sql databases and webservices.
+- custom content type for Guide information
+- Guide css, html, and javascript.
+- setup database schemas
+- custom browserviews
+
+0.0.1a
+------------------
+- Initial Release
+
+0.0.1 (xxxx-xx-xx)
+------------------
+
+- Created recipe with ZopeSkel
+  [David Hietpas]

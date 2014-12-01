@@ -1,0 +1,343 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    i18n_domain="uwosh.libraryguides">
+       
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.2.4b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.2.3b"
+        destination="0.2.4b"
+        handler=".upgrades.upgrade_to_0_2_4b"
+        profile="uwosh.libraryguides:default" />
+            
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.1.8a"
+        description="uwosh.libraryguides upgrade step"
+        source="*"
+        destination="0.2.0b"
+        handler=".upgrades.upgrade_to_0_2_0b"
+        profile="uwosh.libraryguides:default" />
+       
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.2.2b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.2.1b"
+        destination="0.2.2b"
+        handler=".upgrades.upgrade_to_0_2_2b"
+        profile="uwosh.libraryguides:default" />
+       
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.2.5b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.2.4b"
+        destination="0.2.5b"
+        handler=".upgrades.upgrade_to_0_2_5b"
+        profile="uwosh.libraryguides:default" />
+
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.2.6b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.2.5b"
+        destination="0.2.6b"
+        handler=".upgrades.upgrade_to_0_2_6b"
+        profile="uwosh.libraryguides:default" /> 
+       
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.2.7b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.2.6b"
+        destination="0.2.7b"
+        handler=".upgrades.upgrade_to_0_2_7b"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.2.8b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.2.7b"
+        destination="0.2.8b"
+        handler=".upgrades.upgrade_to_0_2_8b"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.2.9b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.2.8b"
+        destination="0.2.9b"
+        handler=".upgrades.upgrade_to_0_2_9b"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.0b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.2.9b"
+        destination="0.3.0b"
+        handler=".upgrades.upgrade_to_0_3_0b"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.1b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.0b"
+        destination="0.3.1b"
+        handler=".upgrades.upgrade_to_0_3_1b"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.2b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.1b"
+        destination="0.3.2b"
+        handler=".upgrades.upgrade_to_0_3_2b"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.3b"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.2b"
+        destination="0.3.3b"
+        handler=".upgrades.upgrade_to_0_3_3b"
+        profile="uwosh.libraryguides:default" />
+
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.4"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.3b"
+        destination="0.3.4"
+        handler=".upgrades.upgrade_to_0_3_4"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.5"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.4"
+        destination="0.3.5"
+        handler=".upgrades.upgrade_to_0_3_5"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.6"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.5"
+        destination="0.3.6"
+        handler=".upgrades.upgrade_to_0_3_6"
+        profile="uwosh.libraryguides:default" />
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.7"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.6"
+        destination="0.3.7"
+        handler=".upgrades.upgrade_to_0_3_7"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.8"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.7"
+        destination="0.3.8"
+        handler=".upgrades.upgrade_to_0_3_8"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.9"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.8"
+        destination="0.3.9"
+        handler=".upgrades.upgrade_to_0_3_9"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.10"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.9"
+        destination="0.3.10"
+        handler=".upgrades.upgrade_to_0_3_10"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.11"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.10"
+        destination="0.3.11"
+        handler=".upgrades.upgrade_to_0_3_11"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.12"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.11"
+        destination="0.3.12"
+        handler=".upgrades.upgrade_to_0_3_12"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.13"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.12"
+        destination="0.3.13"
+        handler=".upgrades.upgrade_to_0_3_13"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.14"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.13"
+        destination="0.3.14"
+        handler=".upgrades.upgrade_to_0_3_14"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.15"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.14"
+        destination="0.3.15"
+        handler=".upgrades.upgrade_to_0_3_15"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.16"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.15"
+        destination="0.3.16"
+        handler=".upgrades.upgrade_to_0_3_16"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.17"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.16"
+        destination="0.3.17"
+        handler=".upgrades.upgrade_to_0_3_17"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.18"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.17"
+        destination="0.3.18"
+        handler=".upgrades.upgrade_to_0_3_18"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.19"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.18"
+        destination="0.3.19"
+        handler=".upgrades.upgrade_to_0_3_19"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.20"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.19"
+        destination="0.3.20"
+        handler=".upgrades.upgrade_to_0_3_20"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.21"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.20"
+        destination="0.3.21"
+        handler=".upgrades.upgrade_to_0_3_21"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.22"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.21"
+        destination="0.3.22"
+        handler=".upgrades.upgrade_to_0_3_22"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.23"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.22"
+        destination="0.3.23"
+        handler=".upgrades.upgrade_to_0_3_23"
+        profile="uwosh.libraryguides:default" />     
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.24"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.23"
+        destination="0.3.24"
+        handler=".upgrades.upgrade_to_0_3_24"
+        profile="uwosh.libraryguides:default" />   
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.25"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.24"
+        destination="0.3.25"
+        handler=".upgrades.upgrade_to_0_3_25"
+        profile="uwosh.libraryguides:default" />   
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.26"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.25"
+        destination="0.3.26"
+        handler=".upgrades.upgrade_to_0_3_26"
+        profile="uwosh.libraryguides:default" />   
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.27"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.26"
+        destination="0.3.27"
+        handler=".upgrades.upgrade_to_0_3_27"
+        profile="uwosh.libraryguides:default" />   
+        
+    <gs:upgradeStep
+        title="Upgrade uwosh.libraryguides to 0.3.28"
+        description="uwosh.libraryguides upgrade step"
+        source="0.3.27"
+        destination="0.3.28"
+        handler=".upgrades.upgrade_to_0_3_28"
+        profile="uwosh.libraryguides:default" />   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+</configure>
